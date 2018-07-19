@@ -7,13 +7,13 @@ pipeline {
     stage('Docker Build') {
       agent any
       steps {
-        sh 'docker build -t tomcat:latest .'
+        sh 'docker build -t mysql:latest .'
       }
 }
      stage('Docker Run') {
       agent any
       steps {
-        sh 'docker run -d -p 8083:8085 --name demo tomcat:latest'
+        sh 'docker run -d -p 3306:3306 --name demo1 mysql:latest'
       }
      
     }
