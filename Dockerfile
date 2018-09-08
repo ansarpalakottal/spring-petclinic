@@ -1,1 +1,4 @@
-from anapsix/alpine-java
+FROM anapsix/alpine-java
+#LABEL maintainer= "praveen.jirra@gmail.com"
+COPY /target/spring-petclinic-2.0.0.BUILD-SNAPSHOT.jar /home/spring-petclinic-2.0.0.BUILD-SNAPSHOT.jar
+CMD ["java","-jar","/home/spring-petclinic-2.0.0.BUILD-SNAPSHOT.jar"]
